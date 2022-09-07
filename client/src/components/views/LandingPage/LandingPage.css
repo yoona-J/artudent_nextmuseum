@@ -1,0 +1,24 @@
+#gradient {
+    font-family: 'Inter', sans-serif ;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+    padding: 232px 0px 0px 119px;
+    background: linear-gradient(to right, #C76BFF, #ffb444, #ffb444);
+    color: transparent;
+    -webkit-background-clip: text;
+    line-height: 61px;
+    margin-bottom: 17px;
+}
+
+#main {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin: 8px;
+    margin-left: 119px;
+}
