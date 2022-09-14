@@ -1,24 +1,43 @@
 #gradient {
     font-family: 'Inter', sans-serif ;
-    font-weight: 800;
     font-style: normal;
-    font-size: 50px;
-    padding: 232px 0px 0px 119px;
-    background: linear-gradient(to right, #C76BFF, #ffb444, #ffb444);
+    background: linear-gradient(to right, #C76BFF, #ffb444, #ffb444, #ffb444, #ffb444, #ffb444, #ffb444);
     color: transparent;
-    -webkit-background-clip: text;
-    line-height: 61px;
-    margin-bottom: 17px;
+    background-clip: text;
 }
 
-#main {
+#text {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+}
+
+/* .flow-container {
+  transform: translate(-850px, 190px) rotate(90deg);
+} */
+
+.flow-text {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    /* transform: rotate(90deg); */
+    font-size: 96px;
     letter-spacing: 0.1em;
-    color: #fff;
-    margin: 8px;
-    margin-left: 119px;
+    font-weight:bold;
+    color: #363636;
+}
+.flow-wrap {
+  animation: textLoop 10s linear infinite;
+  padding-right: 1.4881vw;
+}
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }

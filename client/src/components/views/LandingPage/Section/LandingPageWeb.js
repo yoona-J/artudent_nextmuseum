@@ -1,34 +1,11 @@
 import React from 'react'
-import Logo from './img/Logo.png'
-import Poster from './img/Poster.png'
-import '../LandingPage/LandingPage.css'
-import WaterText from './WaterText'
+import Logo from '../img/Logo.png'
+import Poster from '../img/Poster.png'
+import '../LandingPage.css'
+import WaterText from '../WaterText'
 import {Button} from 'antd'
-import LandingPageWeb from './Section/LandingPageWeb'
 
-function LandingPage() {
-
-    var delay = 300;
-    var timer = null;
-
-    const Landing = () => {
-        window.addEventListener('resize', function() {
-            // console.log('resizing')
-            clearTimeout(timer);
-            timer = setTimeout(function() {
-                if (window.innerWidth > 1200) {
-                    console.log('web!!!')
-                    return <>
-                    </>
-                } else if (window.innerWidth > 601) {
-                    console.log('tab!!!')
-                } else if (window.innerWidth < 600) {
-                    console.log('mobile!!!')
-                }
-            }, delay); 
-        })
-    }
-
+function LandingPageWeb() {
     return (
         <div
             style={{
@@ -199,4 +176,4 @@ function LandingPage() {
     )
 }
 
-export default LandingPage
+export default LandingPageWeb
