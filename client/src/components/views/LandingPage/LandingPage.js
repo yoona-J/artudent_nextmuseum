@@ -43,7 +43,7 @@ function LandingPage() {
                     margin: '0px auto'
                 }}>
                 <div style={{
-                        paddingTop: '60px'
+                        // paddingTop: '60px'
                     }}>
                     <img
                         src={Logo}
@@ -109,6 +109,7 @@ function LandingPage() {
                                 style={{
                                     textAlign: 'center'
                                 }}>
+                                    <a href='/museum'>
                                 <Button
                                     style={{
                                         width: '200px',
@@ -118,6 +119,8 @@ function LandingPage() {
                                         letterSpacing: '0.1em',
                                         margin: '39px 51px 0px 0px'
                                     }}>Museum</Button>
+                                    </a>
+                                    <a href='/about'>
                                 <Button
                                     style={{
                                         width: '200px',
@@ -126,6 +129,7 @@ function LandingPage() {
                                         fontWeight: 'bold',
                                         letterSpacing: '0.1em'
                                     }}>About Us</Button>
+                                    </a>
                             </div>
                             <div
                                 style={{

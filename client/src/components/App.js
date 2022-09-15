@@ -1,8 +1,10 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from "react-router-dom";
-import Auth from "../hoc/auth";
+// import Auth from "../hoc/auth";
 // pages for this product
 import LandingPage from "./views/LandingPage/LandingPage.js";
+import MuseumPage from './views/MuseumPage/MuseumPage.js';
+import AboutPage from './views/AboutPage/AboutPage.js';
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer"
 
@@ -15,25 +17,29 @@ import UploadPage from './views/AdminPage/UploadPage/UploadPage'
 //false  logged in user can't go inside
 
 function App() {
-  if (LandingPage) {
-    return (
-      <Suspense fallback={(<div>Loading...</div>)}>
-          <Switch>
-            <Route exact path="/" component={Auth(LandingPage, null)} />
-          </Switch>
-    </Suspense>
-    )
+
+  const design = () => {
+    if (window.location.href === 'http://localhost:3000/') {
+      return <div style={{display: 'none'}}></div>
+    } else {
+      return <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)', background: '#282828' }}></div>
+    }
   }
+
+  
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
       <NavBar />
-      <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
+        <div>
+          {design()}
         <Switch>
-          <Route exact path="/" component={Auth(LandingPage, null)} />
-          <Route exact path="/admin" component={Auth(AdminPage, null)} />
-          <Route exact path="/admin/upload" component={Auth(UploadPage, null)} />
+          <Route exact path="/" component={(LandingPage)} />
+          <Route exact path="/museum" component={(MuseumPage)} />
+          <Route exact path="/about" component={(AboutPage)} />
+          <Route exact path="/admin" component={(AdminPage)} />
+          <Route exact path="/admin/upload" component={(UploadPage)} />
         </Switch>
-      </div>
+        </div>
       <Footer />
     </Suspense>
   );

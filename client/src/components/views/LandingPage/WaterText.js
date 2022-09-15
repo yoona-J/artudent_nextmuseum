@@ -3,12 +3,12 @@ import './LandingPage.css'
 
 function WaterText() {
   return (
-    <div class="flow-container">
-        <div class="flow-text">
-            <div class="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
-            <div class="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
-            <div class="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
-            <div class="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
+    <div className="flow-container">
+        <div className="flow-text">
+            <div className="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
+            <div className="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
+            <div className="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
+            <div className="flow-wrap">ARTUDENT X NEXT MUSEUM </div>
         </div>
     </div>
   )
