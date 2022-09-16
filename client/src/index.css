@@ -241,3 +241,10 @@ explicitly, e.g.
   font-style: oblique 0deg 10deg;
   src: url("font/Inter.var.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

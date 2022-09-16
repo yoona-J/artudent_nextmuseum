@@ -22,7 +22,7 @@ function App() {
     if (window.location.href === 'http://localhost:3000/') {
       return <div style={{display: 'none'}}></div>
     } else {
-      return <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)', background: '#282828' }}></div>
+      return <div style={{ paddingTop: '69px', minHeight: '120px', background: '#282828' }}></div>
     }
   }
 
@@ -30,8 +30,7 @@ function App() {
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
       <NavBar />
-        <div>
-          {design()}
+        {design()}
         <Switch>
           <Route exact path="/" component={(LandingPage)} />
           <Route exact path="/museum" component={(MuseumPage)} />
@@ -39,7 +38,6 @@ function App() {
           <Route exact path="/admin" component={(AdminPage)} />
           <Route exact path="/admin/upload" component={(UploadPage)} />
         </Switch>
-        </div>
       <Footer />
     </Suspense>
   );

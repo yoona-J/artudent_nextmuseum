@@ -3,8 +3,9 @@ import LeftMenu from './Sections/LeftMenu';
 import RightMenu from './Sections/RightMenu';
 import { Drawer, Button, Icon } from 'antd';
 import './Sections/Navbar.css';
+import Logo from './img/Logo.png'
 
-function NavBar(props) {
+function NavBar() {
   const [visible, setVisible] = useState(false)
 
   const showDrawer = () => {
@@ -23,36 +24,35 @@ function NavBar(props) {
     } else {
       return (
         <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%' }}>
-      <div className="menu__logo">
-        <a href="/">Artudent X NextMuseum</a>
-      </div>
-      <div className="menu__container">
-        <div className="menu_left">
-          <LeftMenu mode="horizontal" />
-        </div>
-        <div className="menu_rigth">
-          <RightMenu mode="horizontal" />
-        </div>
-        <Button
-          className="menu__mobile-button"
-          type="primary"
-          onClick={showDrawer}
-        >
-          <Icon type="align-right" />
-        </Button>
-        <Drawer
-          title="Basic Drawer"
-          placement="right"
-          className="menu_drawer"
-          closable={false}
-          onClose={onClose}
-          visible={visible}
-        >
-          <LeftMenu mode="inline" />
-          <RightMenu mode="inline" />
-        </Drawer>
-      </div>
-    </nav>
+          <div className="menu__container">
+            <a href="/" className='menu_left'>
+              <Icon type='home' theme='filled' style={{fontSize: '35px', color: '#fff'}} />
+            </a>
+            <hr style={{width: '350px', backgroundColor: '#fff', border: 0, height: '1px'}} />
+          <div className="menu__logo">
+            <img src={Logo} style={{width: '130px', height: '65px'}}/>
+          </div>
+          <hr style={{width: '350px', backgroundColor: '#fff', border: 0, height: '1px'}} />
+            <Button
+              className="menu__mobile-button"
+              type="text"
+              onClick={showDrawer}
+              style={{ background: 'none', border: 'none' }}
+            >
+              <Icon type="menu" style={{color: '#fff', fontSize: '35px'}} />
+            </Button>
+            <Drawer
+              title=""
+              placement="right"
+              className="menu_drawer"
+              closable={false}
+              onClose={onClose}
+              visible={visible}
+            >
+              <RightMenu mode="inline" />
+            </Drawer>
+          </div>
+        </nav>
       )
     }
   }
@@ -61,37 +61,6 @@ function NavBar(props) {
     <>
       {navbar()}
     </>
-    // <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%' }}>
-    //   <div className="menu__logo">
-    //     <a href="/">Artudent X NextMuseum</a>
-    //   </div>
-    //   <div className="menu__container">
-    //     <div className="menu_left">
-    //       <LeftMenu mode="horizontal" />
-    //     </div>
-    //     <div className="menu_rigth">
-    //       <RightMenu mode="horizontal" />
-    //     </div>
-    //     <Button
-    //       className="menu__mobile-button"
-    //       type="primary"
-    //       onClick={showDrawer}
-    //     >
-    //       <Icon type="align-right" />
-    //     </Button>
-    //     <Drawer
-    //       title="Basic Drawer"
-    //       placement="right"
-    //       className="menu_drawer"
-    //       closable={false}
-    //       onClose={onClose}
-    //       visible={visible}
-    //     >
-    //       <LeftMenu mode="inline" />
-    //       <RightMenu mode="inline" />
-    //     </Drawer>
-    //   </div>
-    // </nav>
   )
 }
 

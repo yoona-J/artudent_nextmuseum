@@ -1,0 +1,15 @@
+.font {
+    font-family: 'GowunBatang-Regular';
+    font-style: normal;
+}
+
+.ant-card-meta-description {
+    color: #C2C2C2 !important;
+    font-size: 20px !important;
+}
+
+.ant-card-meta-title {
+    color: #C2C2C2 !important;
+    font-size: 20px !important;
+    letter-spacing: 0.3em;
+}

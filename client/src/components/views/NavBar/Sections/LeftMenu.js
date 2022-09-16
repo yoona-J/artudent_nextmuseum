@@ -1,13 +1,13 @@
 import React from 'react';
-import { Menu } from 'antd';
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+import { Icon, Menu } from 'antd';
 
 function LeftMenu(props) {
   return (
-    <Menu mode={props.mode}>
-    <Menu.Item key="mail">
-      <a href="/">Home</a>
+    <Menu mode={props.mode} style={{background: 'none'}}>
+    <Menu.Item key="home">
+      <a href="/">
+        <Icon type='home' theme='filled' style={{fontSize: '35px', color: '#fff'}} />
+      </a>
     </Menu.Item>
   </Menu>
   )

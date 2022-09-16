@@ -74,7 +74,7 @@ function LandingPage() {
                     <div
                         style={{
                             display: 'inline-flex',
-                            justifyContent: 'space-between',
+                            justifyContent: 'space-around',
                             width: '100%'
                         }}>
                         <div
