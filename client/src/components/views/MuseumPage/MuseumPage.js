@@ -15,22 +15,24 @@ function MuseumPage() {
                 </div>
                 <div style={{display: 'inline-flex', flexFlow: 'row wrap', justifyContent: 'space-between', width: '80%', gap: '115px'}}>
                     <div style={{marginTop: '100px'}}>
-                        <Card
-                            style={{
-                                width: '300px',
-                                height: '400px',
-                                background: '#343434',
-                                border: '1px solid #343434',
-                                borderRadius: '10px',
-                                boxShadow: '3px 3px 21px 5px rgba(0, 0, 0, 0.2)',
-                                textAlign: 'center',
-                            }}
-                            cover={
-                                <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" style={{width: '250px', height: '250px', margin: '1rem auto'}}/>
-                            }
-                        >
-                            <Meta title="이준원" description="가나다라" style={{letterSpacing: '0.1em'}} />
-                        </Card>
+                        <a href='/museum/1'>
+                            <Card
+                                style={{
+                                    width: '300px',
+                                    height: '400px',
+                                    background: '#343434',
+                                    border: '1px solid #343434',
+                                    borderRadius: '10px',
+                                    boxShadow: '3px 3px 21px 5px rgba(0, 0, 0, 0.2)',
+                                    textAlign: 'center',
+                                }}
+                                cover={
+                                    <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" style={{width: '250px', height: '250px', margin: '1rem auto'}}/>
+                                }
+                            >
+                                <Meta title="이준원" description="가나다라" style={{letterSpacing: '0.1em'}} />
+                            </Card>
+                        </a>
                     </div>
                     <div style={{marginTop: '100px'}}>
                         <Card

@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 // pages for this product
 import LandingPage from "./views/LandingPage/LandingPage.js";
 import MuseumPage from './views/MuseumPage/MuseumPage.js';
+import DetailProductPage from './views/MuseumPage/DetailProductPage/DetailProductPage.js';
 import AboutPage from './views/AboutPage/AboutPage.js';
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer"
@@ -34,9 +35,10 @@ function App() {
         <Switch>
           <Route exact path="/" component={(LandingPage)} />
           <Route exact path="/museum" component={(MuseumPage)} />
+          <Route exact path="/museum/1" component={(DetailProductPage)} />
           <Route exact path="/about" component={(AboutPage)} />
-          <Route exact path="/admin" component={(AdminPage)} />
-          <Route exact path="/admin/upload" component={(UploadPage)} />
+          <Route exact path="/auth/admin" component={(AdminPage)} />
+          <Route exact path="/auth/admin/upload" component={(UploadPage)} />
         </Switch>
       <Footer />
     </Suspense>
