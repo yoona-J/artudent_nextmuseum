@@ -29,28 +29,30 @@ function NavBar() {
               <Icon type='home' theme='filled' style={{fontSize: '35px', color: '#fff'}} />
             </a>
             <hr style={{width: '350px', backgroundColor: '#fff', border: 0, height: '1px'}} />
-          <div className="menu__logo">
-            <img src={Logo} style={{width: '130px', height: '65px'}}/>
-          </div>
-          <hr style={{width: '350px', backgroundColor: '#fff', border: 0, height: '1px'}} />
-            <Button
-              className="menu__mobile-button"
-              type="text"
-              onClick={showDrawer}
-              style={{ background: 'none', border: 'none' }}
-            >
-              <Icon type="menu" style={{color: '#fff', fontSize: '35px'}} />
-            </Button>
-            <Drawer
-              title=""
-              placement="right"
-              className="menu_drawer"
-              closable={false}
-              onClose={onClose}
-              visible={visible}
-            >
-              <RightMenu mode="inline" />
-            </Drawer>
+            <a href='/'>
+            <div className="menu__logo">
+              <img src={Logo} style={{width: '130px', height: '65px'}}/>
+            </div>
+            </a>
+            <hr style={{width: '350px', backgroundColor: '#fff', border: 0, height: '1px'}} />
+              <Button
+                className="menu__mobile-button"
+                type="text"
+                onClick={showDrawer}
+                style={{ background: 'none', border: 'none' }}
+              >
+                <Icon type="menu" style={{color: '#fff', fontSize: '35px'}} />
+              </Button>
+              <Drawer
+                title=""
+                placement="right"
+                className="menu_drawer"
+                closable={false}
+                onClose={onClose}
+                visible={visible}
+              >
+                <RightMenu mode="inline" />
+              </Drawer>
           </div>
         </nav>
       )

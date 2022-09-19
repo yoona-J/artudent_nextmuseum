@@ -11,23 +11,23 @@ function LandingPage() {
     var delay = 300;
     var timer = null;
 
-    const Landing = () => {
-        window.addEventListener('resize', function() {
-            // console.log('resizing')
-            clearTimeout(timer);
-            timer = setTimeout(function() {
-                if (window.innerWidth > 1200) {
-                    console.log('web!!!')
-                    return <>
-                    </>
-                } else if (window.innerWidth > 601) {
-                    console.log('tab!!!')
-                } else if (window.innerWidth < 600) {
-                    console.log('mobile!!!')
-                }
-            }, delay); 
-        })
-    }
+    // const Landing = () => {
+    //     window.addEventListener('resize', function() {
+    //         // console.log('resizing')
+    //         clearTimeout(timer);
+    //         timer = setTimeout(function() {
+    //             if (window.innerWidth > 1200) {
+    //                 console.log('web!!!')
+    //                 return <>
+    //                 </>
+    //             } else if (window.innerWidth > 601) {
+    //                 console.log('tab!!!')
+    //             } else if (window.innerWidth < 600) {
+    //                 console.log('mobile!!!')
+    //             }
+    //         }, delay); 
+    //     })
+    // }
 
     return (
         <div
@@ -36,15 +36,13 @@ function LandingPage() {
                 height: '100%',
                 background: '#282828'
             }}>
-            <WaterText/>
+            <WaterText />
             <div
                 style={{
                     width: '80%',
                     margin: '0px auto'
                 }}>
-                <div style={{
-                        // paddingTop: '60px'
-                    }}>
+                <div className='logo__bar'>
                     <img
                         src={Logo}
                         style={{
@@ -53,7 +51,7 @@ function LandingPage() {
                         }}/>
                     <hr
                         style={{
-                            width: '88%',
+                            width: '85%',
                             float: 'right',
                             marginTop: '30px',
                             border: 0,
@@ -62,6 +60,7 @@ function LandingPage() {
                         }}/>
                 </div>
                 <div
+                    className='main_div'
                     style={{
                         width: '100%',
                         height: '100%',
@@ -72,10 +71,12 @@ function LandingPage() {
                         marginBottom: '100px'
                     }}>
                     <div
+                        className='container'
                         style={{
                             display: 'inline-flex',
-                            justifyContent: 'space-around',
-                            width: '100%'
+                            justifyContent: 'space-evenly',
+                            width: '100%',
+                            gap: '30px'
                         }}>
                         <div
                             style={{
@@ -107,9 +108,13 @@ function LandingPage() {
                                 }}>SHOW YOUR RELAXATION</p>
                             <div
                                 style={{
-                                    textAlign: 'center'
+                                    textAlign: 'center',
+                                    gap: '40px',
+                                    display: 'inline-flex',
+                                    width: '100%',
+                                    justifyContent: 'space-evenly'
                                 }}>
-                                    <a href='/museum'>
+                                <a href='/museum'>
                                 <Button
                                     style={{
                                         width: '200px',
@@ -117,7 +122,7 @@ function LandingPage() {
                                         fontSize: '16px',
                                         fontWeight: 'bold',
                                         letterSpacing: '0.1em',
-                                        margin: '39px 51px 0px 0px'
+                                        // marginRight:'41px'
                                     }}>Museum</Button>
                                     </a>
                                     <a href='/about'>
@@ -132,6 +137,7 @@ function LandingPage() {
                                     </a>
                             </div>
                             <div
+                                className='date_div'
                                 style={{
                                     marginTop: '75px',
                                     display: 'flex',
@@ -146,6 +152,7 @@ function LandingPage() {
                                         flexDirection: 'column'
                                     }}>
                                     <p
+                                        className='date_title'
                                         style={{
                                             fontSize: '22px',
                                             fontWeight: 'bold',
@@ -153,6 +160,7 @@ function LandingPage() {
                                             color: '#8C8C8C'
                                         }}>From</p>
                                     <p
+                                        className='date'
                                         style={{
                                             fontSize: '32px',
                                             fontWeight: 'bold',
@@ -169,6 +177,7 @@ function LandingPage() {
                                         marginLeft: 'auto'
                                     }}>
                                     <p
+                                        className='date_title'
                                         style={{
                                             fontSize: '22px',
                                             fontWeight: 'bold',
@@ -176,6 +185,7 @@ function LandingPage() {
                                             color: '#8C8C8C'
                                         }}>To</p>
                                     <p
+                                        className='date'
                                         style={{
                                             fontSize: '32px',
                                             fontWeight: 'bold',
@@ -187,9 +197,10 @@ function LandingPage() {
                         </div>
                         <div>
                             <img
+                                className='image_div'
                                 src={Poster}
                                 style={{
-                                    width: '600px',
+                                    width: '538px',
                                     height: '600px'
                                 }}/>
                         </div>
