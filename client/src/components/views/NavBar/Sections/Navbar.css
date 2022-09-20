@@ -62,3 +62,59 @@
 .ant-menu-inline {
   border-right: none;
 }
+
+@media screen and (max-width: 1400px) {
+
+  .menu__container {
+    gap: 50px !important;
+  }
+
+  .menu__container hr {
+    width: 200px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu__container hr {
+    width: 100px !important;
+  }
+
+  .menu__container {
+    gap: 30px !important;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .menu__container hr {
+    width: 80px !important;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .menu__container {
+    gap: 10px !important;
+  }
+
+  .menu__logo img {
+    width: 78px !important;
+    height: 39px !important;
+  }
+
+  .anticon.anticon-home {
+    font-size: 25px !important;
+  }
+
+  .anticon.anticon-menu {
+    font-size: 25px !important;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .menu__container hr {
+    width: 40px !important;
+  }
+
+  .menu__container {
+    gap: 7px !important;
+  }
+}
