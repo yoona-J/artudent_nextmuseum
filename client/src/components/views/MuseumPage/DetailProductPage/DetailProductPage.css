@@ -7,6 +7,87 @@ tr, td {
     padding: 10px;
 }
 
+@media screen and (max-width: 1620px) {
+    .detail_sub_div {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+        gap: 70px !important;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .detail_sub_div img {
+        width: 400px !important;
+        height: 400px !important;
+    }
+
+    .detail_main_div_padding {
+        padding: 90px 100px 111px 100px !important;
+    }
+
+    .detail_carousel_div {
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .detail_sub_div img {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .detail_main_div {
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    .detail_main_div_padding {
+        padding: 0px 57px 110px 57px !important;
+    }
+
+    .detail_full_div {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .detail_main_div_padding {
+        padding: 0px 0px 110px 0px !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .detail_sub_div img {
+        width: 230px !important;
+        height: 230px !important;
+    }
+
+    .detail_title {
+        font-size: 20px !important;
+    }
+
+    .detail_letter {
+        font-size: 14px !important;
+    }
+
+    .detail_text_div Button {
+        width: 90px !important;
+        height: 40px !important;
+    }
+
+    .detail_button {
+        margin-right: 50px !important;
+    }
+
+    .detail_main_div table {
+        width: 100% !important;
+    }
+}
+
 .ant-tabs-ink-bar {
     background-color: #CCCCCC !important;
     height: 3px !important;

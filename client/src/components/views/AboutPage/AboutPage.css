@@ -15,7 +15,6 @@
         align-content: space-around;
         align-items: center;
         margin: 90px 56px 90px 56px !important;
-        /* padding: 0 !important; */
     }
 
     .about_full_div {
@@ -33,6 +32,7 @@
 @media screen and (max-width: 740px) {
     .about_full_div {
         background: none !important;
+        box-shadow: none !important;
     }
 
     .about_main_div img {
