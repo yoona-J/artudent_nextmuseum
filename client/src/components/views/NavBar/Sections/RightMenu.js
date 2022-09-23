@@ -6,14 +6,19 @@ import { withRouter } from 'react-router-dom';
 function RightMenu(props) {
   return (
     <Menu mode={props.mode}>
-    <Menu.Item key="nft">
+    <Menu.Item key="museum">
       <a href="/museum" style={{fontFamily: 'GowunBatang-Regular', fontStyle: 'normal', fontSize: '20px', color: '#fff', letterSpacing: '0.3em'}}>
-        ● NFT
+        ● MUSEUM
       </a>
     </Menu.Item>
     <Menu.Item key="about" style={{marginTop: '47px'}}>
       <a href="/about" style={{fontFamily: 'GowunBatang-Regular', fontStyle: 'normal', fontSize: '20px', color: '#fff', letterSpacing: '0.1em'}}>
         ● ABOUT
+      </a>
+    </Menu.Item>
+    <Menu.Item key="nft" style={{marginTop: '47px'}}>
+      <a href="/nft" style={{fontFamily: 'GowunBatang-Regular', fontStyle: 'normal', fontSize: '20px', color: '#fff', letterSpacing: '0.1em'}}>
+        ● N F T
       </a>
     </Menu.Item>
   </Menu>

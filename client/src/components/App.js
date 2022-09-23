@@ -6,6 +6,7 @@ import LandingPage from "./views/LandingPage/LandingPage.js";
 import MuseumPage from './views/MuseumPage/MuseumPage.js';
 import DetailProductPage from './views/MuseumPage/DetailProductPage/DetailProductPage.js';
 import AboutPage from './views/AboutPage/AboutPage.js';
+import NFTPage from './views/NFTPage/NFTPage.js';
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer"
 
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/museum" component={(MuseumPage)} />
           <Route exact path="/museum/1" component={(DetailProductPage)} />
           <Route exact path="/about" component={(AboutPage)} />
+          <Route exact path="/nft" component={(NFTPage)} />
           <Route exact path="/auth/admin" component={(AdminPage)} />
           <Route exact path="/auth/admin/upload" component={(UploadPage)} />
         </Switch>
