@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from "react-router-dom";
-// import Auth from "../hoc/auth";
+
 // pages for this product
 import LandingPage from "./views/LandingPage/LandingPage.js";
 import MuseumPage from './views/MuseumPage/MuseumPage.js';
