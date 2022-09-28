@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "daec33f4c6cde94a8bae0a96cb16550e",
+    "revision": "cc5f8a3575d74ca962e4b8e362aede06",
     "url": "/artudent_nextmuseum/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/artudent_nextmuseum/static/css/2.051905ae.chunk.css"
   },
   {
-    "revision": "2c7a923a9fbb0e780b00",
+    "revision": "972390d2e15aa9d62a60",
     "url": "/artudent_nextmuseum/static/css/main.0a740847.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/artudent_nextmuseum/static/js/2.d787340c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2c7a923a9fbb0e780b00",
-    "url": "/artudent_nextmuseum/static/js/main.be1f63e6.chunk.js"
+    "revision": "972390d2e15aa9d62a60",
+    "url": "/artudent_nextmuseum/static/js/main.3f1dc08c.chunk.js"
   },
   {
     "revision": "616f4d64a3f78f8543d8",
