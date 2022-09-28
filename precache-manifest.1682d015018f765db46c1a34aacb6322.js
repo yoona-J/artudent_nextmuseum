@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fa10690ec9174c37437295ff524f202e",
+    "revision": "daec33f4c6cde94a8bae0a96cb16550e",
     "url": "/artudent_nextmuseum/index.html"
   },
   {
