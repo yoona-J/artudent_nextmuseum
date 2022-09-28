@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/artudent_nextmuseum/precache-manifest.6a84986ace916498ed2d0201209d9c5c.js"
+  "/artudent_nextmuseum/precache-manifest.c4e0b48b77c69b73bce17d6d92968d61.js"
 );
 
 self.addEventListener('message', (event) => {
