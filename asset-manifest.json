@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "https://yoona-j.github.io/artudent_nextmuseum/static/css/main.256fb4b3.chunk.css",
-    "main.js": "https://yoona-j.github.io/artudent_nextmuseum/static/js/main.763c2714.chunk.js",
-    "main.js.map": "https://yoona-j.github.io/artudent_nextmuseum/static/js/main.763c2714.chunk.js.map",
+    "main.js": "https://yoona-j.github.io/artudent_nextmuseum/static/js/main.ebda9b09.chunk.js",
+    "main.js.map": "https://yoona-j.github.io/artudent_nextmuseum/static/js/main.ebda9b09.chunk.js.map",
     "runtime-main.js": "https://yoona-j.github.io/artudent_nextmuseum/static/js/runtime-main.0582de23.js",
     "runtime-main.js.map": "https://yoona-j.github.io/artudent_nextmuseum/static/js/runtime-main.0582de23.js.map",
     "static/css/2.051905ae.chunk.css": "https://yoona-j.github.io/artudent_nextmuseum/static/css/2.051905ae.chunk.css",
-    "static/js/2.581abb62.chunk.js": "https://yoona-j.github.io/artudent_nextmuseum/static/js/2.581abb62.chunk.js",
-    "static/js/2.581abb62.chunk.js.map": "https://yoona-j.github.io/artudent_nextmuseum/static/js/2.581abb62.chunk.js.map",
+    "static/js/2.9a306e64.chunk.js": "https://yoona-j.github.io/artudent_nextmuseum/static/js/2.9a306e64.chunk.js",
+    "static/js/2.9a306e64.chunk.js.map": "https://yoona-j.github.io/artudent_nextmuseum/static/js/2.9a306e64.chunk.js.map",
     "index.html": "https://yoona-j.github.io/artudent_nextmuseum/index.html",
-    "precache-manifest.738e4529d04d060087246e401ac6feb3.js": "https://yoona-j.github.io/artudent_nextmuseum/precache-manifest.738e4529d04d060087246e401ac6feb3.js",
+    "precache-manifest.c815c20179a8cd06be273c8198ca77a0.js": "https://yoona-j.github.io/artudent_nextmuseum/precache-manifest.c815c20179a8cd06be273c8198ca77a0.js",
     "service-worker.js": "https://yoona-j.github.io/artudent_nextmuseum/service-worker.js",
     "static/css/2.051905ae.chunk.css.map": "https://yoona-j.github.io/artudent_nextmuseum/static/css/2.051905ae.chunk.css.map",
     "static/css/main.256fb4b3.chunk.css.map": "https://yoona-j.github.io/artudent_nextmuseum/static/css/main.256fb4b3.chunk.css.map",
-    "static/js/2.581abb62.chunk.js.LICENSE.txt": "https://yoona-j.github.io/artudent_nextmuseum/static/js/2.581abb62.chunk.js.LICENSE.txt",
+    "static/js/2.9a306e64.chunk.js.LICENSE.txt": "https://yoona-j.github.io/artudent_nextmuseum/static/js/2.9a306e64.chunk.js.LICENSE.txt",
     "static/media/AboutImage.png": "https://yoona-j.github.io/artudent_nextmuseum/static/media/AboutImage.7d672829.png",
     "static/media/index.css": "https://yoona-j.github.io/artudent_nextmuseum/static/media/Inter.var.8dd26c3d.woff2",
     "static/media/Logo.png": "https://yoona-j.github.io/artudent_nextmuseum/static/media/Logo.746b8629.png",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.0582de23.js",
     "static/css/2.051905ae.chunk.css",
-    "static/js/2.581abb62.chunk.js",
+    "static/js/2.9a306e64.chunk.js",
     "static/css/main.256fb4b3.chunk.css",
-    "static/js/main.763c2714.chunk.js"
+    "static/js/main.ebda9b09.chunk.js"
   ]
 }
