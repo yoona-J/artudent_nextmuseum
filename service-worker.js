@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://yoona-j.github.io/artudent_nextmuseum/precache-manifest.4179a09ec63d79472d51149fb361780e.js"
+  "https://yoona-j.github.io/artudent_nextmuseum/precache-manifest.738e4529d04d060087246e401ac6feb3.js"
 );
 
 self.addEventListener('message', (event) => {
