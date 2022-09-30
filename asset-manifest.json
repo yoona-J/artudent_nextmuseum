@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/artudent_nextmuseum/static/css/main.0a740847.chunk.css",
-    "main.js": "/artudent_nextmuseum/static/js/main.f1e17139.chunk.js",
-    "main.js.map": "/artudent_nextmuseum/static/js/main.f1e17139.chunk.js.map",
+    "main.js": "/artudent_nextmuseum/static/js/main.2cde93e8.chunk.js",
+    "main.js.map": "/artudent_nextmuseum/static/js/main.2cde93e8.chunk.js.map",
     "runtime-main.js": "/artudent_nextmuseum/static/js/runtime-main.d4e39065.js",
     "runtime-main.js.map": "/artudent_nextmuseum/static/js/runtime-main.d4e39065.js.map",
     "static/css/2.051905ae.chunk.css": "/artudent_nextmuseum/static/css/2.051905ae.chunk.css",
     "static/js/2.50afba96.chunk.js": "/artudent_nextmuseum/static/js/2.50afba96.chunk.js",
     "static/js/2.50afba96.chunk.js.map": "/artudent_nextmuseum/static/js/2.50afba96.chunk.js.map",
     "index.html": "/artudent_nextmuseum/index.html",
-    "precache-manifest.905ef75a86a9d33aab35568c8844304a.js": "/artudent_nextmuseum/precache-manifest.905ef75a86a9d33aab35568c8844304a.js",
+    "precache-manifest.0785d5d5e98e38db4b293e2a73ceada9.js": "/artudent_nextmuseum/precache-manifest.0785d5d5e98e38db4b293e2a73ceada9.js",
     "service-worker.js": "/artudent_nextmuseum/service-worker.js",
     "static/css/2.051905ae.chunk.css.map": "/artudent_nextmuseum/static/css/2.051905ae.chunk.css.map",
     "static/css/main.0a740847.chunk.css.map": "/artudent_nextmuseum/static/css/main.0a740847.chunk.css.map",
@@ -26,6 +26,6 @@
     "static/css/2.051905ae.chunk.css",
     "static/js/2.50afba96.chunk.js",
     "static/css/main.0a740847.chunk.css",
-    "static/js/main.f1e17139.chunk.js"
+    "static/js/main.2cde93e8.chunk.js"
   ]
 }
