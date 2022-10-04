@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const uploadSchema = mongoose.Schema({
+    id: mongoose.Schema.Types.ObjectId,
     title: {
         type: String,
     },
@@ -16,8 +18,11 @@ const uploadSchema = mongoose.Schema({
     },
     introduce: {
         type: String
+    },
+    images: {
+        type: Array,
+        default: []
     }
-
 })
 
 const Upload = mongoose.model('Upload', uploadSchema);

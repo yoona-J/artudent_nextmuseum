@@ -18,7 +18,7 @@ function ImageUploader(props) {
         formData.append("file", files[0])
 
         axios
-            .post('/api/product/image', formData, config)
+            .post('/api/upload/image', formData, config)
             .then(response => {
                 //불러오는 사진 정보를 가져온다.
                 if (response.data.success) {

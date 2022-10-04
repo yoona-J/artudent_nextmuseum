@@ -1,10 +1,10 @@
 const express = require('express');
-const multer = require('multer');
 const router = express.Router();
+const multer = require('multer');
 const { Upload } = require('../models/Upload');
 
 //=================================
-//            Upload
+//             Product
 //=================================
 
 const storage = multer.diskStorage({
@@ -30,14 +30,18 @@ router.post('/image', (req, res) => {
 
 })
 
+//uploadProductPage.js의 api가 index.js의 api와 같기 때문에 '/'
 router.post('/', (req, res) => {
-    const upload = new Upload(req.body);
 
-    upload.save((err) => {
-        console.log('err', err)
-        if (err) return res.status(400).json({ success: false, err })
-        return res.status(200).json({ success: true });
-    })
+  //받아온 정보들을 DB에 넣어준다
+  // console.log(req.body)
+  const upload = new Upload(req.body)
+  upload.save((err) => {
+    console.log('err', err)
+    if(err) return res.status(400).json({ success: false, err })
+    return res.status(200).json({ success: true })
+  })
+
 })
 
 module.exports = router;

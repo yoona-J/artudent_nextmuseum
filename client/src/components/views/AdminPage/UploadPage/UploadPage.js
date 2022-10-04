@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from 'react'
 import Axios from 'axios'
-import {Input, Form, Button, Icon, Avatar} from 'antd'  
-// import ImageUploader from './ImageUploader';
+import {Input, Form, Button, Icon, Avatar} from 'antd'
+import ImageUploader from './ImageUploader'
 
 const {TextArea} = Input;
 
@@ -11,7 +11,7 @@ function UploadPage() {
 
   const [Title, setTitle] = useState('')
   const [Discription, setDiscription] = useState('')
-  const [Image, setImage] = useState('')
+  const [Images, setImages] = useState([])
   const [Artist, setArtist] = useState('')
   const [Birth, setBirth] = useState('')
   const [Introduce, setIntroduce] = useState('')
@@ -25,7 +25,7 @@ function UploadPage() {
   }
 
   const artistChangeHandler = (event) => {
-    setName(event.currentTarget.value)
+    setArtist(event.currentTarget.value)
   }
 
   const birthChangeHandler = (event) => {
@@ -36,12 +36,8 @@ function UploadPage() {
     setIntroduce(event.currentTarget.value)
   }
 
-  const fileNameHandler = (event) => {
-    setFileName(event.target.value)
-  }
-
-  const updateImage = (newImages) => {
-    setImage(newImages)
+  const imageChangehandler = (newImages) => {
+    setImages(newImages)
   }
 
   const submitHandler = (event) => {
@@ -55,7 +51,8 @@ function UploadPage() {
       discription: Discription,
       name: Artist,
       birth: Birth,
-      introduce: Introduce
+      introduce: Introduce,
+      images: Images
     }
 
     console.log(body)
@@ -99,48 +96,12 @@ function UploadPage() {
                             color: '#fff'
                         }}
                         onSubmitCapture={submitHandler}>
+                        <ImageUploader refreshFunction={imageChangehandler}/>
                         <p>제목</p>
                         <Input 
                           placeholder="작품 제목을 입력하세요"
                           onChange={titleChangeHandler}
                           value={Title}/>
-                          {/* <label htmlFor='image-button'>
-                            <Icon
-                                type="camera"
-                                style={{
-                                    fontSize: "15px",
-                                    marginRight: '8px'
-                                }}/>
-                            사진 첨부하기</label>
-                        <input
-                            type='file'
-                            id='image-button'
-                            style={{
-                                display: 'none'
-                            }}
-                            accept='image/jpg, image/png, image/jpeg'
-                            name='upload_img'
-                            onChange={onChange}
-                            ref={fileInput}/>
-                            <div
-                            style={{
-                                width: '350px',
-                                height: '75px',
-                                border: '1px solid',
-                                color: 'gray',
-                                borderRadius: '11px',
-                                margin: '16px 20px 0px 11px',
-                                padding: '9px',
-                                display: 'flex',
-                            }}>
-                            <Avatar
-                                shape="square"
-                                size={55}
-                                src={FileName}
-                                onChange={fileNameHandler}
-                                value={FileName}/>
-                                </div> */}
-                                {/* <ImageUploader refreshFunction = {updateImage} /> */}
                         <p>내용</p>
                         <TextArea 
                           placeholder="작품 설명을 입력하세요"
