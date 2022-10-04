@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import LeftMenu from './Sections/LeftMenu';
 import RightMenu from './Sections/RightMenu';
 import { Drawer, Button, Icon } from 'antd';
 import './Sections/Navbar.css';
@@ -17,7 +16,7 @@ function NavBar() {
   };
 
   const navbar = () => {
-    if (window.location.href === 'http://localhost:3000/') {
+    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'https://yoona-j.github.io/artudent_nextmuseum/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum') {
       return <>
         <nav style={{display: 'none'}} />
       </>
@@ -31,7 +30,7 @@ function NavBar() {
             <hr style={{width: '350px', backgroundColor: '#fff', border: 0, height: '1px'}} />
             <a href='/'>
             <div className="menu__logo">
-              <img src={Logo} style={{width: '130px', height: '65px'}}/>
+              <img src={Logo} alt='logo' style={{width: '130px', height: '65px'}}/>
             </div>
             </a>
             <hr style={{width: '350px', backgroundColor: '#fff', border: 0, height: '1px'}} />

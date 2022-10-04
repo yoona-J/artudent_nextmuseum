@@ -1,6 +1,9 @@
+/* eslint-disable */
+
 import React, { useRef, useState } from 'react'
 import Axios from 'axios'
-import {Input, Form, Button, Icon, Avatar} from 'antd'
+import {Input, Form, Button, Icon, Avatar} from 'antd'  
+// import ImageUploader from './ImageUploader';
 
 const {TextArea} = Input;
 
@@ -8,33 +11,10 @@ function UploadPage() {
 
   const [Title, setTitle] = useState('')
   const [Discription, setDiscription] = useState('')
+  const [Image, setImage] = useState('')
   const [Artist, setArtist] = useState('')
   const [Birth, setBirth] = useState('')
   const [Introduce, setIntroduce] = useState('')
-
-  //이미지 업로더 생성
-  const [FileName, setFileName] = useState('')
-  const [File, setFile] = useState([])
-  const [Name, setName] = useState('')
-
-  const fileInput = useRef(null)
-
-  const onChange = (event) => {
-    if (event.target.files[0]) {
-      console.log('event.target.files[0]', event.target.files[0])
-      setName(event.target.files[0].name)
-      const targetFile = event.target.files[0];
-      const name = (event.target.files[0].name) + (event.target.files[0].lastModified)
-      const type = event.target.files[0].type
-      ///https://velog.io/@mimi0905/Presigned-URL%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-S3%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C
-      Axios
-        .post(`https://artudent-nft.s3.us-east-1.amazonaws.com/upload/${name}`)
-        .then(response => {
-          console.log('response', response)
-        })
-
-    }
-  }
 
   const titleChangeHandler = (event) => {
     setTitle(event.currentTarget.value)
@@ -60,6 +40,10 @@ function UploadPage() {
     setFileName(event.target.value)
   }
 
+  const updateImage = (newImages) => {
+    setImage(newImages)
+  }
+
   const submitHandler = (event) => {
     event.preventDefault();
     if (!Title || !Discription || !Artist || !Birth || !Introduce) {
@@ -82,12 +66,6 @@ function UploadPage() {
         console.log('response', response)
       })
   }
-
-  // const presignedUrl = () => {
-  //   //https://artudent-nft.s3.amazonaws.com/antiquity-3069912_1920.png
-  // }
-
-
 
     return (
         <div
@@ -126,7 +104,7 @@ function UploadPage() {
                           placeholder="작품 제목을 입력하세요"
                           onChange={titleChangeHandler}
                           value={Title}/>
-                          <label htmlFor='image-button'>
+                          {/* <label htmlFor='image-button'>
                             <Icon
                                 type="camera"
                                 style={{
@@ -161,7 +139,8 @@ function UploadPage() {
                                 src={FileName}
                                 onChange={fileNameHandler}
                                 value={FileName}/>
-                                </div>
+                                </div> */}
+                                {/* <ImageUploader refreshFunction = {updateImage} /> */}
                         <p>내용</p>
                         <TextArea 
                           placeholder="작품 설명을 입력하세요"

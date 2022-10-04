@@ -1,6 +1,6 @@
 import React from 'react'
 import './NFTPage.css'
-import AboutImage from './img/NFTImage.png'
+import NFTImage from './img/NFTImage.png'
 
 function NFTPage() {
     return (
@@ -43,7 +43,8 @@ function NFTPage() {
                             }}>
                             <div>
                                 <img
-                                    src={AboutImage}
+                                    src={NFTImage}
+                                    alt='nftImage'
                                     style={{
                                         width: '800px',
                                         height: '500px'
@@ -58,7 +59,7 @@ function NFTPage() {
                                     style={{
                                         fontSize: '24px',
                                         letterSpacing: '0.1em'
-                                    }}>Artudent</p>
+                                    }}>Artudent-NFT</p>
                                 <div
                                     className='nft_letter_div'
                                     style={{

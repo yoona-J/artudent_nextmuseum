@@ -23,6 +23,7 @@ function LandingPage() {
                 <div className='logo__bar'>
                     <img
                         src={Logo}
+                        alt='logo'
                         style={{
                             width: '130px',
                             height: '65px'
@@ -92,7 +93,7 @@ function LandingPage() {
                                     width: '100%',
                                     justifyContent: 'space-evenly'
                                 }}>
-                                <a href='/museum'>
+                                <a href='./museum'>
                                 <Button
                                     style={{
                                         width: '200px',
@@ -103,7 +104,7 @@ function LandingPage() {
                                         // marginRight:'41px'
                                     }}>Museum</Button>
                                     </a>
-                                    <a href='/about'>
+                                    <a href='./about'>
                                 <Button
                                     style={{
                                         width: '200px',
@@ -177,6 +178,7 @@ function LandingPage() {
                             <img
                                 className='image_div'
                                 src={Poster}
+                                alt='poster'
                                 style={{
                                     width: '538px',
                                     height: '600px'

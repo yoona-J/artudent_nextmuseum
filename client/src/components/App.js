@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from "react-router-dom";
+// import { HashRouter as Router, Route } from 'react-router-dom';
 
 // pages for this product
 import LandingPage from "./views/LandingPage/LandingPage.js";
@@ -21,7 +22,7 @@ import UploadPage from './views/AdminPage/UploadPage/UploadPage'
 function App() {
 
   const design = () => {
-    if (window.location.href === 'http://localhost:3000/') {
+    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'https://yoona-j.github.io/artudent_nextmuseum/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum') {
       return <div style={{display: 'none'}}></div>
     } else {
       return <div style={{ paddingTop: '69px', minHeight: '120px', background: '#282828' }}></div>
@@ -30,20 +31,20 @@ function App() {
 
   
   return (
-    <Suspense fallback={(<div>Loading...</div>)}>
-      <NavBar />
-        {design()}
-        <Switch>
-          <Route exact path="/" component={(LandingPage)} />
-          <Route exact path="/museum" component={(MuseumPage)} />
-          <Route exact path="/museum/1" component={(DetailProductPage)} />
-          <Route exact path="/about" component={(AboutPage)} />
-          <Route exact path="/nft" component={(NFTPage)} />
-          <Route exact path="/auth/admin" component={(AdminPage)} />
-          <Route exact path="/auth/admin/upload" component={(UploadPage)} />
-        </Switch>
-      <Footer />
-    </Suspense>
+      <Suspense fallback={(<div>Loading...</div>)}>
+        <NavBar />
+          {design()}
+          <Switch>
+            <Route exact path="/" component={(LandingPage)} />
+            <Route exact path="/museum" component={(MuseumPage)} />
+            <Route exact path="/museum/1" component={(DetailProductPage)} />
+            <Route exact path="/about" component={(AboutPage)} />
+            <Route exact path="/nft" component={(NFTPage)} />
+            <Route exact path="/auth/admin" component={(AdminPage)} />
+            <Route exact path="/auth/admin/upload" component={(UploadPage)} />
+          </Switch>
+        <Footer />
+      </Suspense>
   );
 }
 

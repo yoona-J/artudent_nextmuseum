@@ -25,7 +25,7 @@ ReactDOM.render(
             window.__REDUX_DEVTOOLS_EXTENSION__()
         )}
     >
-        <BrowserRouter>
+        <BrowserRouter basename="/artudent_nextmuseum">
             <App />
         </BrowserRouter>
     </Provider>
