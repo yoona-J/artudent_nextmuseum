@@ -13,8 +13,7 @@ const uploadSchema = mongoose.Schema({
         type: String,
     },
     birth: {
-        type: Number,
-        maxlength: 8
+        type: String,
     },
     introduce: {
         type: String
@@ -22,6 +21,15 @@ const uploadSchema = mongoose.Schema({
     images: {
         type: Array,
         default: []
+    },
+    year: {
+        type: String
+    },
+    size: {
+        type: String
+    },
+    meterial: {
+        type: String
     }
 })
 

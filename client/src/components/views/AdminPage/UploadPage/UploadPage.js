@@ -1,13 +1,13 @@
 /* eslint-disable */
 
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import Axios from 'axios'
-import {Input, Form, Button, Icon, Avatar} from 'antd'
+import {Input, Form, Button} from 'antd'
 import ImageUploader from './ImageUploader'
 
 const {TextArea} = Input;
 
-function UploadPage() {
+function UploadPage(props) {
 
   const [Title, setTitle] = useState('')
   const [Discription, setDiscription] = useState('')
@@ -15,6 +15,9 @@ function UploadPage() {
   const [Artist, setArtist] = useState('')
   const [Birth, setBirth] = useState('')
   const [Introduce, setIntroduce] = useState('')
+  const [Year, setYear] = useState('')
+  const [Size, setSize] = useState('')
+  const [Meterial, setMeterial] = useState('')
 
   const titleChangeHandler = (event) => {
     setTitle(event.currentTarget.value)
@@ -40,9 +43,21 @@ function UploadPage() {
     setImages(newImages)
   }
 
+  const yearChangeHandler = (event) => {
+    setYear(event.currentTarget.value)
+  }
+
+  const sizeChangeHandler = (event) => {
+    setSize(event.currentTarget.value)
+  }
+
+  const meterialChangeHandler = (event) => {
+    setMeterial(event.currentTarget.value)
+  }
+
   const submitHandler = (event) => {
     event.preventDefault();
-    if (!Title || !Discription || !Artist || !Birth || !Introduce) {
+    if (!Title || !Discription || !Artist || !Birth || !Introduce || !Images || !Year || !Size || !Meterial) {
       return alert("모든 값을 입력해야 합니다.")
     }
 
@@ -52,7 +67,10 @@ function UploadPage() {
       name: Artist,
       birth: Birth,
       introduce: Introduce,
-      images: Images
+      images: Images,
+      year: Year,
+      size: Size,
+      meterial: Meterial
     }
 
     console.log(body)
@@ -60,7 +78,14 @@ function UploadPage() {
     Axios
       .post('/api/upload', body)
       .then(response => {
-        console.log('response', response)
+        if (response.status === 200) {  
+          alert('업로드 성공!')
+          props
+            .history
+            .push('/auth/admin')
+        } else {
+          alert('업로드에 실패했어요')
+        }
       })
   }
 
@@ -116,13 +141,27 @@ function UploadPage() {
                         <Input
                           placeholder="작가 생년월일을 입력하세요"
                           onChange={birthChangeHandler}
-                          value={Birth}
-                          type='number'/>
+                          value={Birth}/>
                         <p>작가 소개</p>
                         <Input 
                           placeholder="작가 한줄 소개를 입력하세요"
                           onChange={introduceChangeHandler}
                           value={Introduce}/>
+                        <p>작품 제작 연도</p>
+                        <Input 
+                          placeholder="작품 제작 연도를 입력하세요"
+                          onChange={yearChangeHandler}
+                          value={Year}/>
+                        <p>작품 크기</p>
+                        <Input 
+                          placeholder="작품 크기를 입력하세요"
+                          onChange={sizeChangeHandler}
+                          value={Size}/>
+                        <p>작품 소재</p>
+                        <Input 
+                          placeholder="작품 소재를 입력하세요"
+                          onChange={meterialChangeHandler}
+                          value={Meterial}/>
                         <Button htmlType='submit'>UPLOAD</Button>
                         <Button>CANCEL</Button>
                     </Form>

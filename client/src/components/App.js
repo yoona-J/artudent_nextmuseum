@@ -22,7 +22,7 @@ import UploadPage from './views/AdminPage/UploadPage/UploadPage'
 function App() {
 
   const design = () => {
-    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'https://yoona-j.github.io/artudent_nextmuseum/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum') {
+    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'https://yoona-j.github.io/artudent_nextmuseum/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum' || window.location.href === 'http://192.168.150.1:3000/') {
       return <div style={{display: 'none'}}></div>
     } else {
       return <div style={{ paddingTop: '69px', minHeight: '120px', background: '#282828' }}></div>
@@ -37,7 +37,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={(LandingPage)} />
             <Route exact path="/museum" component={(MuseumPage)} />
-            <Route exact path="/museum/1" component={(DetailProductPage)} />
+            <Route exact path="/museum/:uploadId" component={(DetailProductPage)} />
             <Route exact path="/about" component={(AboutPage)} />
             <Route exact path="/nft" component={(NFTPage)} />
             <Route exact path="/auth/admin" component={(AdminPage)} />

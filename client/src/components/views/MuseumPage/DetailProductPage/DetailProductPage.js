@@ -1,15 +1,42 @@
 /* eslint-disable */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios'
 import {Button, Carousel, Modal, Tabs} from 'antd'
 import './DetailProductPage.css'
-import test from './img/test.png'
 
-function DetailProductPage() {
+function DetailProductPage(props) {
+
+    const uploadId = props.match.params.uploadId
+
+    const [Exhibit, setExhibit] = useState('')
+
+    useEffect(() => {
+      Axios
+        .get(`/api/upload/uploads_by_id?id=${uploadId}&type=single`)
+        .then(response => {
+            console.log(response.data[0])
+            setExhibit(response.data[0])
+        })
+    }, [])
 
     const onChange = (currentSlide) => {
         console.log(currentSlide);
     };
+    
+    const mapper = () => {
+        if (Exhibit.images !== undefined) {
+            return <Carousel afterChange={onChange}>
+                {Exhibit.images.map((image, index) => (
+                    <div key={index} className='detail_carousel_div'>
+                        <img style={{width: '500px', height: '500px'}}
+                        src={`http://localhost:5000/${image}`}
+                        alt='img' />
+                    </div>
+                ))}
+            </Carousel>
+        }
+    }
 
     const tab = (key) => {
         console.log(key)
@@ -31,7 +58,6 @@ function DetailProductPage() {
     const handleCancel = () => {
         setIsModalOpen(false);
     };
-
 
     return (
         <div
@@ -75,17 +101,9 @@ function DetailProductPage() {
                                     alignItems: 'center',
                                     gap: '140px'
                                 }}>
-                                <Carousel afterChange={onChange}>
-                                    <div className='detail_carousel_div'>
-                                        <img
-                                            src={test}
-                                            alt='carousel'
-                                            style={{
-                                                width: '500px',
-                                                height: '500px'
-                                            }}/>
-                                    </div>
-                                </Carousel>
+                                <div>
+                                    {mapper()}
+                                </div>
                                 <div className='detail_text_div'>
                                     <p
                                         className='detail_title'
@@ -93,19 +111,18 @@ function DetailProductPage() {
                                             fontSize: '24px',
                                             letterSpacing: '0.3em',
                                             marginBottom: '35px'
-                                        }}>가나다라</p>
+                                        }}>{Exhibit.title}</p>
                                     <p
                                         className='detail_letter'
                                         style={{
                                             fontSize: '16px',
                                             letterSpacing: '0.1em',
                                             lineHeight: '23px',
-                                            marginBottom: '35px'
+                                            marginBottom: '35px',                         
+                                            whiteSpace: 'pre-wrap',
+                                            wordBreak: 'break-all',
                                         }}>
-                                        흙으로 벌레는 별들을 쓸쓸함과 별 새겨지는 있습니다. 이런 동경과 아름다운 위에 나는 아직 노루, 까닭입니다. 쓸쓸함과 별들을 남은 우는
-                                        소녀들의 까닭이요, 이름을 까닭입니다. 슬퍼하는 하나에 내 하나의 까닭이요, 내 때 어머님, 있습니다. 이름을 까닭입니다. 슬퍼하는 하나에 내
-                                        하나의 까닭이요, 내 때 어머님, 있습니다. 이름을 까닭입니다. 슬퍼하는 하나에 내 하나의 까닭이요, 내 때 어머님, 있습니다. 이름을
-                                        까닭입니다. 슬퍼하는 하나에 내 하나의 까닭이요, 내 때 어머님, 있습니다.
+                                        {Exhibit.discription}
                                     </p>
                                     <Button
                                         className='detail_button'
@@ -161,7 +178,6 @@ function DetailProductPage() {
                                         width: '600px',
                                         color: '#fff'
                                     }}>
-                                    {/* <Tabs.TabPane tab="Property" key='1'>작품 정보</Tabs.TabPane> */}
                                     <Tabs.TabPane tab="Artist" key='1'>
                                         <table
                                             style={{
@@ -172,15 +188,15 @@ function DetailProductPage() {
                                             <tbody>
                                                 <tr>
                                                     <td>이름</td>
-                                                    <td>이준원</td>
+                                                    <td>{Exhibit.name}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>출생</td>
-                                                    <td>1998.06.17</td>
+                                                    <td>{Exhibit.birth}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>소개</td>
-                                                    <td>바다코끼리에 대한 작품을 만듭니다.</td>
+                                                    <td>{Exhibit.introduce}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -195,15 +211,15 @@ function DetailProductPage() {
                                             <tbody>
                                                 <tr>
                                                     <td>제작 연도</td>
-                                                    <td>2021년</td>
+                                                    <td>{Exhibit.year}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>작품 크기</td>
-                                                    <td>1000 * 1000</td>
+                                                    <td>{Exhibit.size}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>작품 소재</td>
-                                                    <td>캔버스에 유화</td>
+                                                    <td>{Exhibit.meterial}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
