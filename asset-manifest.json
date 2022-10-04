@@ -1,31 +1,30 @@
 {
   "files": {
-    "main.css": "/artudent_nextmuseum/static/css/main.0a740847.chunk.css",
-    "main.js": "/artudent_nextmuseum/static/js/main.f70a1399.chunk.js",
-    "main.js.map": "/artudent_nextmuseum/static/js/main.f70a1399.chunk.js.map",
+    "main.css": "/artudent_nextmuseum/static/css/main.f9d5e0fa.chunk.css",
+    "main.js": "/artudent_nextmuseum/static/js/main.9f04f0a2.chunk.js",
+    "main.js.map": "/artudent_nextmuseum/static/js/main.9f04f0a2.chunk.js.map",
     "runtime-main.js": "/artudent_nextmuseum/static/js/runtime-main.d4e39065.js",
     "runtime-main.js.map": "/artudent_nextmuseum/static/js/runtime-main.d4e39065.js.map",
     "static/css/2.051905ae.chunk.css": "/artudent_nextmuseum/static/css/2.051905ae.chunk.css",
-    "static/js/2.50afba96.chunk.js": "/artudent_nextmuseum/static/js/2.50afba96.chunk.js",
-    "static/js/2.50afba96.chunk.js.map": "/artudent_nextmuseum/static/js/2.50afba96.chunk.js.map",
+    "static/js/2.fefcfbb1.chunk.js": "/artudent_nextmuseum/static/js/2.fefcfbb1.chunk.js",
+    "static/js/2.fefcfbb1.chunk.js.map": "/artudent_nextmuseum/static/js/2.fefcfbb1.chunk.js.map",
     "index.html": "/artudent_nextmuseum/index.html",
-    "precache-manifest.c24419d4e4de5c59edaa3fc251f9727a.js": "/artudent_nextmuseum/precache-manifest.c24419d4e4de5c59edaa3fc251f9727a.js",
+    "precache-manifest.ea6afd39b516119e95516bcca3cddbf8.js": "/artudent_nextmuseum/precache-manifest.ea6afd39b516119e95516bcca3cddbf8.js",
     "service-worker.js": "/artudent_nextmuseum/service-worker.js",
     "static/css/2.051905ae.chunk.css.map": "/artudent_nextmuseum/static/css/2.051905ae.chunk.css.map",
-    "static/css/main.0a740847.chunk.css.map": "/artudent_nextmuseum/static/css/main.0a740847.chunk.css.map",
-    "static/js/2.50afba96.chunk.js.LICENSE.txt": "/artudent_nextmuseum/static/js/2.50afba96.chunk.js.LICENSE.txt",
+    "static/css/main.f9d5e0fa.chunk.css.map": "/artudent_nextmuseum/static/css/main.f9d5e0fa.chunk.css.map",
+    "static/js/2.fefcfbb1.chunk.js.LICENSE.txt": "/artudent_nextmuseum/static/js/2.fefcfbb1.chunk.js.LICENSE.txt",
     "static/media/AboutImage.png": "/artudent_nextmuseum/static/media/AboutImage.7d672829.png",
     "static/media/index.css": "/artudent_nextmuseum/static/media/Inter.var.8dd26c3d.woff2",
     "static/media/Logo.png": "/artudent_nextmuseum/static/media/Logo.746b8629.png",
     "static/media/NFTImage.png": "/artudent_nextmuseum/static/media/NFTImage.7d672829.png",
-    "static/media/Poster.png": "/artudent_nextmuseum/static/media/Poster.e8c71a41.png",
-    "static/media/test.png": "/artudent_nextmuseum/static/media/test.35e1d3ad.png"
+    "static/media/Poster.png": "/artudent_nextmuseum/static/media/Poster.e8c71a41.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d4e39065.js",
     "static/css/2.051905ae.chunk.css",
-    "static/js/2.50afba96.chunk.js",
-    "static/css/main.0a740847.chunk.css",
-    "static/js/main.f70a1399.chunk.js"
+    "static/js/2.fefcfbb1.chunk.js",
+    "static/css/main.f9d5e0fa.chunk.css",
+    "static/js/main.9f04f0a2.chunk.js"
   ]
 }
