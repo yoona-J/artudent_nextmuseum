@@ -21,7 +21,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: 체크 아웃
+    - name: check-out
       uses: actions/checkout@v3
       
     - name: node.js 설정 ${{ matrix.node-version }}
@@ -30,18 +30,18 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     
-    - name: 빌드
+    - name: build
       working-directory: ./client
       run: |
         npm install
         npm run build
         
-    - name: 빌드 폴더 압축하기
+    - name: zipping build folder
       working-directory: ./client
       run: |
         zip -r build.zip ./build
         
-    - name: s3 업로드
+    - name: s3 upload
       working-directory: .client
       run: aws s3 mv build.zip s3://artudent/static/build.zip
       env:
