@@ -1,10 +1,12 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Aws S3 CI 자동화 배포
 
 on:
   push:
+    paths:
+      - "client/**"
     branches: [ master ]
   pull_request:
     branches: [ master ]
@@ -12,32 +14,37 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: client
 
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [10.16.0]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: 체크 아웃
+      uses: actions/checkout@v3
+      
+    - name: node.js 설정 ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm i
-    - run: npm run build --if-present
-    - run: npm test
     
-    - uses: awact/s3-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
+    - name: 빌드
+      working-directory: ./client
+      run: |
+        npm install
+        npm run build
+        
+    - name: 빌드 폴더 압축하기
+      working-directory: ./client
+      run: |
+        zip -r build.zip ./build
+        
+    - name: s3 업로드
+      working-directory: .client
+      run: aws s3 mv build.zip s3://artudent/static/build.zip
       env:
-        SOURCE_DIR: './build'
-        AWS_REGION: 'ap-northeast-2'
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-northeast-2'
