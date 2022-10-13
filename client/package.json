@@ -2,7 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yoona-j.github.io/artudent_nextmuseum",
   "dependencies": {
     "antd": "^3.24.1",
     "axios": "^0.19.2",

@@ -16,7 +16,7 @@ function NavBar() {
   };
 
   const navbar = () => {
-    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'https://yoona-j.github.io/artudent_nextmuseum/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum' || window.location.href === 'http://192.168.150.1:3000/') {
+    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum' || window.location.href === 'http://artudent.s3-website.ap-northeast-2.amazonaws.com/') {
       return <>
         <nav style={{display: 'none'}} />
       </>

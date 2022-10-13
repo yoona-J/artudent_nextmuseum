@@ -22,7 +22,7 @@ import UploadPage from './views/AdminPage/UploadPage/UploadPage'
 function App() {
 
   const design = () => {
-    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'https://yoona-j.github.io/artudent_nextmuseum/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum' || window.location.href === 'http://192.168.150.1:3000/') {
+    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum' || window.location.href === 'http://artudent.s3-website.ap-northeast-2.amazonaws.com/') {
       return <div style={{display: 'none'}}></div>
     } else {
       return <div style={{ paddingTop: '69px', minHeight: '120px', background: '#282828' }}></div>

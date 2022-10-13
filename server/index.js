@@ -33,6 +33,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+console.log(process.env.NODE_ENV)
+app.use(function (req, res, next) {
+  console.log(req);
+  return next();
+})
+
 // app.use('/api/users', require('./routes/users'));
 app.use('/api/upload', require('./routes/upload'));
 
