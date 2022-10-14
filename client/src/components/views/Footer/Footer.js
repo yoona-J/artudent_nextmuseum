@@ -5,7 +5,7 @@ import './Footer.css'
 function Footer() {
 
     const footer = () => {
-        if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum' || window.location.href === 'http://artudent.s3-website.ap-northeast-2.amazonaws.com/') {
+        if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://3.37.190.182/') {
             return <>
                 <div style={{display: 'none'}} />
             </>

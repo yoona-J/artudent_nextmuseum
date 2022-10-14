@@ -18,6 +18,7 @@ function UploadPage(props) {
   const [Year, setYear] = useState('')
   const [Size, setSize] = useState('')
   const [Meterial, setMeterial] = useState('')
+  const [Content, setContent] = useState('')
 
   const titleChangeHandler = (event) => {
     setTitle(event.currentTarget.value)
@@ -55,9 +56,13 @@ function UploadPage(props) {
     setMeterial(event.currentTarget.value)
   }
 
+  const contentChangeHandler = (event) => {
+    setContent(event.currentTarget.value)
+  }
+
   const submitHandler = (event) => {
     event.preventDefault();
-    if (!Title || !Discription || !Artist || !Birth || !Introduce || !Images || !Year || !Size || !Meterial) {
+    if (!Title || !Discription || !Artist || !Birth || !Introduce || !Images || !Year || !Size || !Meterial || !Content) {
       return alert("모든 값을 입력해야 합니다.")
     }
 
@@ -70,7 +75,8 @@ function UploadPage(props) {
       images: Images,
       year: Year,
       size: Size,
-      meterial: Meterial
+      meterial: Meterial,
+      content: Content
     }
 
     console.log(body)
@@ -82,7 +88,7 @@ function UploadPage(props) {
           alert('업로드 성공!')
           props
             .history
-            .push('/auth/admin')
+            .push('/museum')
         } else {
           alert('업로드에 실패했어요')
         }
@@ -142,6 +148,11 @@ function UploadPage(props) {
                           placeholder="작가 생년월일을 입력하세요"
                           onChange={birthChangeHandler}
                           value={Birth}/>
+                        <p>작가 연락처</p>
+                        <Input
+                          placeholder="작가 연락처를 입력하세요"
+                          onChange={contentChangeHandler}
+                          value={Content}/>
                         <p>작가 소개</p>
                         <Input 
                           placeholder="작가 한줄 소개를 입력하세요"

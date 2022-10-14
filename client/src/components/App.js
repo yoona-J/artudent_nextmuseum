@@ -12,7 +12,6 @@ import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer"
 
 //admin page
-import AdminPage from './views/AdminPage/AdminPage';
 import UploadPage from './views/AdminPage/UploadPage/UploadPage'
 
 //null   Anyone Can go inside
@@ -22,7 +21,7 @@ import UploadPage from './views/AdminPage/UploadPage/UploadPage'
 function App() {
 
   const design = () => {
-    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://localhost:3000/artudent_nextmuseum' || window.location.href === 'http://artudent.s3-website.ap-northeast-2.amazonaws.com/') {
+    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://3.37.190.182/') {
       return <div style={{display: 'none'}}></div>
     } else {
       return <div style={{ paddingTop: '69px', minHeight: '120px', background: '#282828' }}></div>
@@ -40,7 +39,6 @@ function App() {
             <Route exact path="/museum/:uploadId" component={(DetailProductPage)} />
             <Route exact path="/about" component={(AboutPage)} />
             <Route exact path="/nft" component={(NFTPage)} />
-            <Route exact path="/auth/admin" component={(AdminPage)} />
             <Route exact path="/auth/admin/upload" component={(UploadPage)} />
           </Switch>
         <Footer />

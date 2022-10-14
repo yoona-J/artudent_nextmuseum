@@ -33,9 +33,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-console.log(process.env.NODE_ENV)
+// console.log(process.env.NODE_ENV)
 app.use(function (req, res, next) {
-  console.log(req);
+  // console.log(req);
   return next();
 })
 

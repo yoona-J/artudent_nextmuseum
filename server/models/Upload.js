@@ -30,6 +30,9 @@ const uploadSchema = mongoose.Schema({
     },
     meterial: {
         type: String
+    },
+    content: {
+        type: String
     }
 })
 

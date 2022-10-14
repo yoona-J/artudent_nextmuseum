@@ -102,7 +102,7 @@ function ImageUploader(props) {
                                     height: '240px'
                                 }}
                                 alt='img'
-                                src={`http://localhost:5000/${image}`}/>
+                                src={`https://artudent.s3.ap-northeast-2.amazonaws.com/${image}`}/>
                         </div>
                     ))
                 }
