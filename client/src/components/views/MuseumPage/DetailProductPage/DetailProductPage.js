@@ -30,7 +30,7 @@ function DetailProductPage(props) {
                 {Exhibit.images.map((image, index) => (
                     <div key={index} className='detail_carousel_div'>
                         <img style={{width: '500px', height: '500px'}}
-                        src={`http://localhost:5000/${image}`}
+                        src={`http://3.37.190.182/${image}`}
                         alt='img' />
                     </div>
                 ))}
