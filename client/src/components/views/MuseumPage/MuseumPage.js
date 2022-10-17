@@ -74,7 +74,7 @@ function MuseumPage() {
 
         console.log('upload', upload)
 
-        return <div className='museum_card_div' style={{marginTop: '100px', marginBottom: '80px'}}>
+        return <div className='museum_card_div' style={{marginTop: '100px', marginBottom: '80px'}} key='index'>
         <a href={`/museum/${upload._id}`}>
             <Card
                 style={{

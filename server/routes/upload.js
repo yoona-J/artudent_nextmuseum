@@ -11,24 +11,10 @@ const { Upload } = require('../models/Upload');
 //=================================
 
 AWS.config.update({
-  accessKeyId: process.env.S3_ACCESS_KEY_ID,
-  secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.REACT_APP_S3_ACCESS_KEY_ID,
+  secretAccessKey: process.env.REACT_APP_S3_SECRET_ACCESS_KEY,
   region: "ap-northeast-2",
 })
-
-console.log('ppp', process.env.S3_ACCESS_KEY_ID)
-
-// const storage = multer.diskStorage({
-//     //어디에 파일이 저장이 되는지 - uploads 파일 안 이미지
-//     destination: function (req, file, cb) {
-//       cb(null, 'uploads/')
-//     },
-//     filename: function (req, file, cb) {
-//       cb(null, `${Date.now()}_${file.originalname}`)
-//     }
-//   })
-  
-// const upload = multer({ storage: storage }).single("file")
 
 const upload = multer({
   storage: multerS3({
