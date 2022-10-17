@@ -181,7 +181,8 @@ function LandingPage() {
                                 alt='poster'
                                 style={{
                                     width: '538px',
-                                    height: '600px'
+                                    height: '600px',
+                                    borderRadius: '20px'
                                 }}/>
                         </div>
                     </div>

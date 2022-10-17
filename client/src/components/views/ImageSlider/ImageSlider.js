@@ -8,7 +8,7 @@ function ImageSlider(props) {
                 {props.images.map((image, index) => (
                     <div key={index}>
                         <img style={{width: '250px', height: '250px', margin: '1rem auto'}}
-                        src={`http://3.37.190.182/${image}`}
+                        src={`https://artudent.s3.ap-northeast-2.amazonaws.com/${image}`}
                         alt='img' />
                     </div>
                 ))}

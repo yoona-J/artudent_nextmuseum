@@ -35,8 +35,8 @@ const upload = multer({
     s3: new AWS.S3(),
     bucket: "artudent",
     key(req, file, cb) {
-      const fileName = file.originalname.toLowerCase().split(" ").join("-");
-      cb(null, `${Date.now()}_${fileName}`);
+      const fileName = file.originalname;
+      cb(null, `${fileName}`);
     },
   }),
 }).single("file")
@@ -47,7 +47,7 @@ router.post('/image', (req, res) => {
         if(err) {
             return res.json({ success: false, err })
         }
-        return res.json({ success: true, filePath: res.req.file.key, fileName: res.req.file.filename })
+        return res.json({ success: true, filePath: res.req.file.key})
     })
 
 })

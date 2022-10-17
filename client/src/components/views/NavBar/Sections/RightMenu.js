@@ -16,11 +16,6 @@ function RightMenu(props) {
         ● ABOUT
       </a>
     </Menu.Item>
-    <Menu.Item key="nft" style={{marginTop: '47px'}}>
-      <a href="/nft" style={{fontFamily: 'GowunBatang-Regular', fontStyle: 'normal', fontSize: '20px', color: '#fff', letterSpacing: '0.1em'}}>
-        ● N F T
-      </a>
-    </Menu.Item>
   </Menu>
   )
 }

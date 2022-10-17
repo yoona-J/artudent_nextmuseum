@@ -29,8 +29,8 @@ function DetailProductPage(props) {
             return <Carousel afterChange={onChange}>
                 {Exhibit.images.map((image, index) => (
                     <div key={index} className='detail_carousel_div'>
-                        <img style={{width: '500px', height: '500px'}}
-                        src={`http://3.37.190.182/${image}`}
+                        <img style={{width: '500px', height: '500px', objectFit: 'contain'}}
+                        src={`https://artudent.s3.ap-northeast-2.amazonaws.com/${image}`}
                         alt='img' />
                     </div>
                 ))}
@@ -142,13 +142,13 @@ function DetailProductPage(props) {
                                             title='작품 구매 연락처 안내'
                                             // centered
                                             visible={isModalOpen}
-                                            // onOk={handleOk}
+                                            onOk={handleOk}
                                             onCancel={handleCancel}
                                             width={500}>
                                                 <div>
                                                     <p>artudent는 작품 위탁 판매를 진행하지 않고 있습니다.</p>
-                                                    <p>따라서 실물 작품 구매는 작가 개인 연락처로 연락부탁드립니다.</p>
-                                                    <p>이준원 작가 : leejw@artudent.co.kr</p>
+                                                    <p>따라서 실물 작품 구매는 작가 개인 연락처로 연락 부탁드립니다.</p>
+                                                    <p>{Exhibit.name} 작가 : {Exhibit.content}</p>
                                                 </div>
                                             </Modal>
                                     <Button

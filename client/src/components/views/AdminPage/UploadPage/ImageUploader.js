@@ -12,7 +12,12 @@ function ImageUploader(props) {
 
         const config = {
             header: {
-                'content-type': 'multipart/form-data'
+                // 'content-type': 'multipart/form-data'
+                // Accept: 'application/json',
+                'Content-Type': 'application/json',
+                // 'X-Content-Type-Options': 'nosniff',
+                // 'dataType': 'jsonp',
+
             }
         }
         formData.append("file", files[0])
@@ -22,7 +27,7 @@ function ImageUploader(props) {
             .then(response => {
                 //불러오는 사진 정보를 가져온다.
                 if (response.data.success) {
-                    console.log(response.data)
+                    console.log(response)
 
                     setImages([
                         ...Images,
