@@ -3,12 +3,17 @@ const router = express.Router();
 const multer = require('multer');
 const multerS3 = require('multer-s3');
 const AWS = require('aws-sdk');
+const dotenv = require('dotenv')
 const { Upload } = require('../models/Upload');
 
 
 //=================================
 //             Product
 //=================================
+
+dotenv.config();
+console.log('REACT_APP_S3_ACCESS_KEY_ID', process.env.REACT_APP_S3_ACCESS_KEY_ID)
+console.log('REACT_APP_S3_SECRET_ACCESS_KEY', process.env.REACT_APP_S3_SECRET_ACCESS_KEY)
 
 AWS.config.update({
   accessKeyId: process.env.REACT_APP_S3_ACCESS_KEY_ID,
