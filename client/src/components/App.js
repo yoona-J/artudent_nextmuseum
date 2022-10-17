@@ -21,7 +21,7 @@ import UploadPage from './views/AdminPage/UploadPage/UploadPage'
 function App() {
 
   const design = () => {
-    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://3.37.190.182/' || window.location.href === 'http://www.artudent.co.kr/') {
+    if (window.location.href === 'http://localhost:3000/' || window.location.href === 'http://3.37.190.182/' || window.location.href === 'https://artudent.co.kr/') {
       return <div style={{display: 'none'}}></div>
     } else {
       return <div style={{ paddingTop: '69px', minHeight: '120px', background: '#282828' }}></div>
