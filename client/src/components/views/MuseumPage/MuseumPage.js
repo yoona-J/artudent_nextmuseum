@@ -85,6 +85,7 @@ function MuseumPage() {
                     borderRadius: '10px',
                     boxShadow: '3px 3px 21px 5px rgba(0, 0, 0, 0.2)',
                     textAlign: 'center',
+                    objectFit: 'contain'
                 }}
                 cover={
                     <ImageSlider images = { upload.images } />

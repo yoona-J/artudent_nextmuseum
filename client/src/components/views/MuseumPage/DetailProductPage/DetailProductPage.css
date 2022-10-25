@@ -102,9 +102,9 @@ tr, td {
     color: #fff !important;
 }
 
-.ant-tabs-nav .ant-tabs-tab {
+/* .ant-tabs-nav .ant-tabs-tab {
     margin-right: 166px;
-}
+} */
 
 .ant-tabs-nav-wrap {
     margin-bottom: 0px;

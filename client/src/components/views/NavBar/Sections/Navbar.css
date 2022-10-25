@@ -92,6 +92,12 @@
 
 @media screen and (max-width: 630px) {
   .menu__container {
+    gap: 20px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu__container {
     gap: 10px !important;
   }
 
@@ -110,6 +116,16 @@
 }
 
 @media screen and (max-width: 376px) {
+  .menu__container hr {
+    width: 60px !important;
+  }
+
+  .menu__container {
+    gap: 7px !important;
+  }
+}
+
+@media screen and (max-width: 330px) {
   .menu__container hr {
     width: 40px !important;
   }
