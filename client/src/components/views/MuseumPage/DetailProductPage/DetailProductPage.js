@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Axios from 'axios'
 import {Button, Carousel, Modal, Tabs} from 'antd'
 import './DetailProductPage.css'
+import ProductImage from './ProductImage'
 
 function DetailProductPage(props) {
 
@@ -19,22 +20,10 @@ function DetailProductPage(props) {
             setExhibit(response.data[0])
         })
     }, [])
-
-    const onChange = (currentSlide) => {
-        console.log(currentSlide);
-    };
     
     const mapper = () => {
         if (Exhibit.images !== undefined) {
-            return <Carousel afterChange={onChange}>
-                {Exhibit.images.map((image, index) => (
-                    <div key={index} className='detail_carousel_div'>
-                        <img style={{width: '500px', height: '500px', objectFit: 'contain'}}
-                        src={`https://artudent.s3.ap-northeast-2.amazonaws.com/${image}`}
-                        alt='img' />
-                    </div>
-                ))}
-            </Carousel>
+            return <ProductImage images = { Exhibit.images } />
         }
     }
 
