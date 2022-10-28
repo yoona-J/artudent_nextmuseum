@@ -131,12 +131,17 @@ function DetailProductPage(props) {
                                             title='작품 구매 연락처 안내'
                                             // centered
                                             visible={isModalOpen}
-                                            onOk={handleOk}
+                                            // onOk={handleOk}
                                             onCancel={handleCancel}
-                                            width={500}>
+                                            width={500}
+                                            footer={[
+                                                <Button key='back' className='detail_modal_btn' onClick={handleCancel} style={{ width: '470px', height: '40px', borderRadius: '20px', background: '#575757', color: '#fff'}}>
+                                                    확인
+                                                </Button>
+                                            ]}>
                                                 <div>
                                                     <p>artudent는 작품 위탁 판매를 진행하지 않고 있습니다.</p>
-                                                    <p>따라서 실물 작품 구매는 작가 개인 연락처로 연락 부탁드립니다.</p>
+                                                    <p>실물 작품 구매는 작가 개인 연락처로 연락 부탁드립니다.</p>
                                                     <p>{Exhibit.name} 작가 : {Exhibit.content}</p>
                                                 </div>
                                             </Modal>
