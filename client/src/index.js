@@ -10,6 +10,7 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet';
 
 import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise';
@@ -19,7 +20,9 @@ const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)
 
 ReactDOM.render(
         <BrowserRouter>
-            <App />
+            <HelmetProvider>
+                <App />
+            </HelmetProvider>
         </BrowserRouter>
     , document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
