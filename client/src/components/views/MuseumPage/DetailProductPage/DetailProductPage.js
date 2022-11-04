@@ -145,17 +145,19 @@ function DetailProductPage(props) {
                                                     <p>{Exhibit.name} 작가 : {Exhibit.content}</p>
                                                 </div>
                                             </Modal>
-                                    <Button
-                                        style={{
-                                            width: '109px',
-                                            height: '49px',
-                                            background: '#575757',
-                                            borderRadius: '10px',
-                                            boxShadow: '4px 8px 30px 5px rgba(0, 0, 0, 0.15)',
-                                            border: 0,
-                                            fontSize: '16px',
-                                            color: '#fff'
-                                        }}>N F T</Button>
+                                        <a href='https://artudent.nftify.network/discover'>
+                                        <Button
+                                            style={{
+                                                width: '109px',
+                                                height: '49px',
+                                                background: '#575757',
+                                                borderRadius: '10px',
+                                                boxShadow: '4px 8px 30px 5px rgba(0, 0, 0, 0.15)',
+                                                border: 0,
+                                                fontSize: '16px',
+                                                color: '#fff'
+                                            }}>N F T</Button>
+                                        </a>
                                 </div>
                             </div>
                             <div
